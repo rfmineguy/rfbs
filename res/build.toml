@@ -1,5 +1,5 @@
 [build]
-  #name = "Hello World"
+  name = "Hello World"
   type = "executable" #static, shared
   target = "x86_64-linux"
   output-dir = "out/"

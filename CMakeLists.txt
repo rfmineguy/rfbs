@@ -5,10 +5,8 @@ set(SOURCES
   src/main.c
   src/toml_processing.c
   src/file_change.c
+  src/args.c
   )
-#set(TOMLC99_SOURCES
-#  src/tomlc99/toml.c
-#  )
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ggdb -ferror-limit=100 -fsanitize=address")
 file (COPY res DESTINATION ${CMAKE_BINARY_DIR})
@@ -50,4 +48,4 @@ target_link_libraries(rfbs
 
 target_include_directories(rfbs PRIVATE ${argparse_SOURCE_DIR} ${libtoml_SOURCE_DIR} ${sha1_SOURCE_DIR} src/)
 
-#install(TARGET rfbs)
+install(TARGETS rfbs)
