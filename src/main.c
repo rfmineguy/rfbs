@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <limits.h>
 #include <toml.h>
 #include "file_change.h"
 #include "toml_processing.h"
@@ -12,8 +14,6 @@
   func(); \
   printf("==================\n"); \
 
-
-
 void test_toml() {
   rfbs_data_t build_info = process_toml_file("res/build.toml");
   show_rfbs_data(&build_info);
@@ -22,28 +22,39 @@ void test_toml() {
   toml_table_free(build_info.table_handle);
 }
 
-int build_program(args a) {
-  printf("Searching for build.toml\n");
+rfbs_data_t get_rfbs_data(args a) {
+  char buff[PATH_MAX] = {0};
+  strcat(buff, a.build_dir);
+  strcat(buff, "/build.toml");
+  printf("%s\n", buff);
+  FILE* f = fopen(buff, "r");
+  if (!f) {
+    fprintf(stderr, "No build.toml present in current directory\n");
+    fclose(f);
+    exit(90);
+  }
+  return process_toml_file(buff);
+}
 
+void build(args a) {
+  rfbs_data_t d = get_rfbs_data(a);
+  show_rfbs_data(&d);
+
+  toml_table_free(d.table_handle);
 }
 
 int main(int argc, const char** argv) {
   args a = get_args(argc, argv);
 
-  /*
-   * Analyze input arguments
-   */
-  char* realpath_build_dir = realpath(a.build_dir, NULL);
-  char* realpath_run_dir = realpath(a.run_dir, NULL);
-
-  printf("build_dir: %s\n", realpath_build_dir);
-  printf("run_dir:   %s\n", realpath_run_dir);
+  printf("build_dir: %s\n", a.build_dir);
+  printf("run_dir:   %s\n", a.run_dir);
+  
   if (a.should_build) {
-    printf("Building..\n");
+    build(a);
   }
 
-  free(realpath_build_dir);
-  free(realpath_run_dir);
+  free((void*)a.build_dir);
+  free((void*)a.run_dir);
 
   // TEST_WRAPPER("Test Sha", test_sha);   // file_change.h
   // TEST_WRAPPER("Test TOML", test_toml);
