@@ -6,4 +6,4 @@ add_library(tomlc99
 
 set_property(TARGET tomlc99 PROPERTY C_STANDARD 99)
 
-target_include_directories(tomlc99 PUBLIC ../tomlc99)
+target_include_directories(tomlc99 PUBLIC ../tomlc99-build ../tomlc99-src)

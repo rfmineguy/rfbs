@@ -1,0 +1,80 @@
+Performing C SOURCE FILE Test toml_has_c_flag_-Wduplicated-branches failed with the following output:
+Change Dir: /Users/rileyfischer/Documents/dev/languages/rfbs/build/CMakeFiles/CMakeScratch/TryCompile-fn1ivb
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_95845/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_95845.dir/build.make CMakeFiles/cmTC_95845.dir/build
+Building C object CMakeFiles/cmTC_95845.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -ferror-limit=100  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk   -Dtoml_has_c_flag_-Wduplicated-branches -Wduplicated-branches -MD -MT CMakeFiles/cmTC_95845.dir/src.c.o -MF CMakeFiles/cmTC_95845.dir/src.c.o.d -o CMakeFiles/cmTC_95845.dir/src.c.o -c /Users/rileyfischer/Documents/dev/languages/rfbs/build/CMakeFiles/CMakeScratch/TryCompile-fn1ivb/src.c
+warning: unknown warning option '-Wduplicated-branches' [-Wunknown-warning-option]
+In file included from <built-in>:400:
+<command line>:1:25: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define toml_has_c_flag_-Wduplicated-branches 1
+                        ^
+2 warnings generated.
+Linking C executable cmTC_95845
+/opt/homebrew/Cellar/cmake/3.25.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95845.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -ferror-limit=100  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_95845.dir/src.c.o -o cmTC_95845 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test toml_has_c_flag_-Wduplicated-cond failed with the following output:
+Change Dir: /Users/rileyfischer/Documents/dev/languages/rfbs/build/CMakeFiles/CMakeScratch/TryCompile-xYNGwn
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_42233/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_42233.dir/build.make CMakeFiles/cmTC_42233.dir/build
+Building C object CMakeFiles/cmTC_42233.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -ferror-limit=100  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk   -Dtoml_has_c_flag_-Wduplicated-cond -Wduplicated-cond -MD -MT CMakeFiles/cmTC_42233.dir/src.c.o -MF CMakeFiles/cmTC_42233.dir/src.c.o.d -o CMakeFiles/cmTC_42233.dir/src.c.o -c /Users/rileyfischer/Documents/dev/languages/rfbs/build/CMakeFiles/CMakeScratch/TryCompile-xYNGwn/src.c
+warning: unknown warning option '-Wduplicated-cond' [-Wunknown-warning-option]
+In file included from <built-in>:400:
+<command line>:1:25: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define toml_has_c_flag_-Wduplicated-cond 1
+                        ^
+2 warnings generated.
+Linking C executable cmTC_42233
+/opt/homebrew/Cellar/cmake/3.25.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42233.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -ferror-limit=100  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_42233.dir/src.c.o -o cmTC_42233 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test toml_has_c_flag_-Wno-format-truncation failed with the following output:
+Change Dir: /Users/rileyfischer/Documents/dev/languages/rfbs/build/CMakeFiles/CMakeScratch/TryCompile-FUaK9M
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_571e4/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_571e4.dir/build.make CMakeFiles/cmTC_571e4.dir/build
+Building C object CMakeFiles/cmTC_571e4.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -ferror-limit=100  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk   -Dtoml_has_c_flag_-Wno-format-truncation -Wno-format-truncation -MD -MT CMakeFiles/cmTC_571e4.dir/src.c.o -MF CMakeFiles/cmTC_571e4.dir/src.c.o.d -o CMakeFiles/cmTC_571e4.dir/src.c.o -c /Users/rileyfischer/Documents/dev/languages/rfbs/build/CMakeFiles/CMakeScratch/TryCompile-FUaK9M/src.c
+warning: unknown warning option '-Wno-format-truncation' [-Wunknown-warning-option]
+In file included from <built-in>:400:
+<command line>:1:25: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define toml_has_c_flag_-Wno-format-truncation 1
+                        ^
+2 warnings generated.
+Linking C executable cmTC_571e4
+/opt/homebrew/Cellar/cmake/3.25.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_571e4.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -ferror-limit=100  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_571e4.dir/src.c.o -o cmTC_571e4 
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test toml_has_c_flag_-Werror=discarded-qualifiers failed with the following output:
+Change Dir: /Users/rileyfischer/Documents/dev/languages/rfbs/build/CMakeFiles/CMakeScratch/TryCompile-Vnb77Z
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fed92/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fed92.dir/build.make CMakeFiles/cmTC_fed92.dir/build
+Building C object CMakeFiles/cmTC_fed92.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -ferror-limit=100  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk   -Dtoml_has_c_flag_-Werror=discarded-qualifiers -Werror=discarded-qualifiers -MD -MT CMakeFiles/cmTC_fed92.dir/src.c.o -MF CMakeFiles/cmTC_fed92.dir/src.c.o.d -o CMakeFiles/cmTC_fed92.dir/src.c.o -c /Users/rileyfischer/Documents/dev/languages/rfbs/build/CMakeFiles/CMakeScratch/TryCompile-Vnb77Z/src.c
+warning: unknown warning option '-Werror=discarded-qualifiers'; did you mean '-Werror=ignored-qualifiers'? [-Wunknown-warning-option]
+In file included from <built-in>:400:
+<command line>:1:25: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define toml_has_c_flag_-Werror discarded-qualifiers
+                        ^
+2 warnings generated.
+Linking C executable cmTC_fed92
+/opt/homebrew/Cellar/cmake/3.25.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fed92.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -ferror-limit=100  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fed92.dir/src.c.o -o cmTC_fed92 
+
+
+Source file was:
+int main(void) { return 0; }
+

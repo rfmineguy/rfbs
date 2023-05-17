@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/CMakeFiles/libtoml-populate"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/CMakeFiles/libtoml-populate.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/CMakeFiles/libtoml-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/libtoml-populate-prefix/src/libtoml-populate-stamp/libtoml-populate-build.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/libtoml-populate-prefix/src/libtoml-populate-stamp/libtoml-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/libtoml-populate-prefix/src/libtoml-populate-stamp/libtoml-populate-download.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/libtoml-populate-prefix/src/libtoml-populate-stamp/libtoml-populate-install.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/libtoml-populate-prefix/src/libtoml-populate-stamp/libtoml-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/libtoml-populate-prefix/src/libtoml-populate-stamp/libtoml-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/libtoml-populate-prefix/src/libtoml-populate-stamp/libtoml-populate-test.rule"
+		},
+		{
+			"file" : "/Users/rileyfischer/Documents/dev/languages/rfbs/build/_deps/libtoml-subbuild/libtoml-populate-prefix/src/libtoml-populate-stamp/libtoml-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libtoml-populate"
+		],
+		"name" : "libtoml-populate"
+	}
+}
