@@ -14,6 +14,18 @@
   func(); \
   printf("==================\n"); \
 
+#define COMMAND(fmt, ...) \
+
+int sys_command(const char* fmt, ...) {
+  static char buffer[255] = {0};
+  va_list args;
+  va_start(args, fmt);
+  vsnprintf(buffer, 255, fmt, args);
+  va_end(args);
+  printf("Running: %s\n", buffer);
+  return system(buffer);
+}
+
 void test_toml() {
   rfbs_data_t build_info = process_toml_file("res/build.toml");
   show_rfbs_data(&build_info);
@@ -39,6 +51,14 @@ rfbs_data_t get_rfbs_data(args a) {
 void build(args a) {
   rfbs_data_t d = get_rfbs_data(a);
   show_rfbs_data(&d);
+
+  //
+  // use the rfbs_data here
+  //
+  for (int i = 0; i < d.sources_count; i++) {
+    sys_command("cat $(pwd)/%s", d.sources[i]);
+  }
+
 
   toml_table_free(d.table_handle);
 }

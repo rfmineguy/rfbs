@@ -24,12 +24,16 @@ args get_args(int argc, const char** argv) {
   struct argparse argparse;
   argparse_init(&argparse, options, usages, 0);
   argc = argparse_parse(&argparse, argc, argv);
+
+  // Either use the supplied directory or the current directory
   if (!a.build_dir) {
     a.build_dir = realpath(".", NULL);
   }
   else {
     a.build_dir = realpath(a.build_dir, NULL);
   }
+
+  // Either use the supplied directory or the current directory
   if (!a.run_dir) {
     a.run_dir = realpath(".", NULL);
   }
