@@ -3,6 +3,17 @@
 #include <stdlib.h>
 #include <toml.h>
 
+void print_array(char array[100][100], int count) {
+  printf("[");
+  for (int i = 0; i < count; i++) {
+    printf("%s", array[i]);
+    if (i != count - 1) {
+      printf(", ");
+    }
+  }
+  printf("]\n");
+}
+
 int is_toml_of_type(TomlValue* v, TomlType type) {
   return v->type == type;
 }
@@ -21,6 +32,23 @@ TomlErrCode toml_table_get_w_er(TomlTable* tableIn, TomlValue** valueOut, const 
 
 int check_toml_type(TomlValue* t, TomlType type) {
   return t->type == type;
+}
+
+void show_rfbs_data(rfbs_data_t* data) {
+  /* General build information */
+  printf("  name: %s\n", data->output_name);
+  printf("  type: %s\n", data->output_type);
+  printf("  target: %s\n", data->output_target);
+  printf("  output-dir: %s\n", data->outputpath);
+
+  /* Libs to link/build */
+  printf("  libs: ");        print_array(data->libs, data->libs_count);
+  printf("  searchpaths: "); print_array(data->searchpaths, data->searchpaths_count);
+  printf("  sources: ");     print_array(data->sources, data->sources_count);
+
+  /* Features */
+  printf("  show_parse_tree: %s\n", data->show_parse_tree ? "true": "false");
+  printf("  generate_asm: %s\n", data->show_parse_tree ? "true": "false");
 }
 
 rfbs_data_t process_toml_file(const char* filename) {

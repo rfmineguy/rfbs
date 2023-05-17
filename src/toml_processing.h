@@ -44,9 +44,11 @@ typedef enum {
   FIELD_COUNT
 } field_type_t;
 
-void print_string_array(char**, int);
+void print_array(char[100][100], int);
 int show_toml_buffer(TomlArray*);
 int check_toml_type(TomlValue*, TomlType);
+
+void show_rfbs_data(rfbs_data_t*);
 rfbs_data_t process_toml_file(const char*);
 
 #endif

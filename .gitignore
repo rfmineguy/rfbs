@@ -1,1 +1,7 @@
+/build/
+*.swp
+/src/*.swp
 build/
+.DS_Store
+*.swp
+src/*.swp
